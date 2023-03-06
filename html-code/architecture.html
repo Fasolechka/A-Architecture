@@ -2,21 +2,24 @@
 <html lang="ru">
  <head>
   <meta charset="utf-8">
-  <title>A'Arcitecture</title>
+  <title>A'Architecture</title>
   <link href="../anna.css" rel="stylesheet" type="text/css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  </head>
  <body>
 
+  <div class="loading-overlay">
+    <h1>A'Architecture</h1>
+  </div>
+
   <div class="header">
-    <h1>A'Arcitecture</h1>
+    <h1>A'Architecture</h1>
     <nav>
       <ul>
-        <li><a href="../index.html">all projects</a></li>
-        <li><a href="architecture.html" class="active">architecture</a></li>
-        <li><a href="design.html">design</a></li>
-        <li><a href="art.html">art</a></li>
-        <li><a href="me.html">about me</a></li>
+        <li><a onclick="onMove()" href="../index.html">all projects</a></li>
+        <li><a onclick="onMove()" href="architecture.html" class="active">architecture</a></li>
+        <li><a onclick="onMove()" href="design.html">design</a></li>
+        <li><a onclick="onMove()" href="art.html">art</a></li>
+        <li><a onclick="onMove()" href="me.html">about me</a></li>
       </ul>
     </nav>
   </div>
@@ -68,6 +71,6 @@
   </div>
 
 
-  <script src="anna.js"></script>
+  <script src="../anna.js"></script>
  </body>
 </html>

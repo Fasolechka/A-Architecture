@@ -3,22 +3,24 @@
 
 <head>
   <meta charset="utf-8">
-  <title>A'Arcitecture</title>
+  <title>A'Architecture</title>
   <link href="anna.css" rel="stylesheet" type="text/css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-
+  <div class="loading-overlay">
+    <h1>A'Architecture</h1>
+  </div>
+  
   <div class="header">
-    <h1>A'Arcitecture</h1>
+    <h1>A'Architecture</h1>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">all projects</a></li>
-        <li><a href="html-code/architecture.html">architecture</a></li>
-        <li><a href="html-code/design.html">design</a></li>
-        <li><a href="html-code/art.html">art</a></li>
-        <li><a href="html-code/me.html">about me</a></li>
+        <li><a onclick="onMove()" href="index.html" class="active">all projects</a></li>
+        <li><a onclick="onMove()" href="html-code/architecture.html">architecture</a></li>
+        <li><a onclick="onMove()" href="html-code/design.html">design</a></li>
+        <li><a onclick="onMove()" href="html-code/art.html">art</a></li>
+        <li><a onclick="onMove()" href="html-code/me.html">about me</a></li>
       </ul>
     </nav>
   </div>
