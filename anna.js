@@ -32,6 +32,11 @@ if (typeof (Storage) !== "undefined") {
         writeLog(`beforeunload: isMove = ${isMove}`);
         localStorage.setItem("is-move", isMove);
     });
+
+    window.addEventListener('popstate', function () {
+        writeLog(`popstate: isMove = ${isMove}`);
+        localStorage.setItem("is-move", isMove);
+    });
 };
 
 const debugElement = document.getElementById('debug');
