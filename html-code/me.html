@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>A'Architecture</title>
   <link href="../anna.css" rel="stylesheet" type="text/css">
+  <link href="../annaMob.css" rel="stylesheet" type="text/css">
  </head>
  <body>
 
@@ -14,12 +15,15 @@
   <div class="header">
     <h1>A'Architecture</h1>
     <nav>
+      <div class="hamburger"><img src="../images/Untitled.png"></div>
       <ul>
-        <li><a onclick="onMove()" href="../index.html">all projects</a></li>
-        <li><a onclick="onMove()" href="architecture.html">architecture</a></li>
-        <li><a onclick="onMove()" href="design.html">design</a></li>
-        <li><a onclick="onMove()" href="art.html">art</a></li>
-        <li><a onclick="onMove()" href="me.html" class="active">about me</a></li>
+        <div class="menu">
+          <li><a onclick="onMove()" href="../index.html" class="menu-item">all projects</a></li>
+          <li><a onclick="onMove()" href="architecture.html" class="menu-item">architecture</a></li>
+          <li><a onclick="onMove()" href="design.html" class="menu-item">design</a></li>
+          <li><a onclick="onMove()" href="art.html" class="menu-item">art</a></li>
+          <li><a onclick="onMove()" href="me.html" class="slash activeMenu menu-item">about me</a></li>
+        </div>
       </ul>
     </nav>
   </div>

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'MyFont';
+  src: url('shrift.woff2') format('woff2');
+  /* добавьте дополнительные форматы, если они есть */
+}
+
+
+
 body {
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
   font-size: 120%;
@@ -56,38 +64,132 @@ p {
 
 /* Меню и заголовок */
 
-.header {
-  font-size: 100%;
-  letter-spacing: 1px;
-  display: flex;
-  font-family: 'Roboto', sans-serif;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(208, 208, 208);
-  padding: 1.4%;
-  position: fixed; /* фиксация меню */
-  width: 90%;
-  margin-bottom: 30px;
-  top: 0;
-  margin-top: 10px;
-  background-color: rgba(208, 208, 208, 0.902);
-  z-index: 1; /* фиксация меню поверх другого контента */
+@media (min-width: 1000px) {  
+  .header {
+    font-size: 100%;
+    letter-spacing: 1.5px;
+    display: flex;
+    font-family: 'MyFont', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4%;
+    position: fixed; /* фиксация меню */
+    width: 90%;
+    margin-bottom: 30px;
+    top: 0;
+    margin-top: 10px;
+    background-color: rgba(208, 208, 208, 0.902);
+    z-index: 1; /* фиксация меню поверх другого контента */
+  }
+
+  img:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Стиль для активного пункта меню */
+  .slash {
+    border-bottom: 2px solid grey;
+  }
+
+  nav a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav a:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  /* Карточки */
+
+  .main-content {
+    display: flex;
+    margin: 30px;
+    margin-top: 70px;
+  }
+
+  .main-content img {
+    width: 100%;
+  }
+
+  .left-column {
+    flex: 1;
+    margin: 20px;
+  }
+
+  .left-column p {
+    margin-bottom: 30px;
+  }
+
+  .left-column h2 {
+    margin-bottom: 10px;
+  }
+
+  .right-column {
+    flex: 1;
+    margin: 20px;
+  }
+
+  .right-column p {
+    margin-bottom: 30px;
+  }
+
+  .right-column h2 {
+    margin-bottom: 10px;
+  }
+
+  /* Текст на странице */
+
+  p {
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    line-height: 1.5;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .contacts {
+    text-align: center;
+  }
+
+  .personal {
+    margin-top: 100px;
+    font-size: 21px;
+  }
+
+  img {
+    transition: all 0.5s ease-in-out;
+  }
 }
 
+.hamburger img {
+  display: none;
+}
 
 .header h1 {
   margin: 0;
   font-size: 30px;
-  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-family: 'MyFont', sans-serif;
   letter-spacing: 2px;
   
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
 }
 
 nav li {
@@ -99,83 +201,22 @@ nav li:last-child {
   margin-right: 0;
 }
 
-nav a {
-  display: block;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
-}
-
-nav a:hover {
-  transform: translateY(-2px);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Стиль для активного пункта меню */
-.active {
-  border-bottom: 2px solid grey;
-}
 
 
-/* Карточки */
 
-.main-content {
-  display: flex;
-  margin: 30px;
-  margin-top: 70px;
-}
 
-.main-content img {
-  width: 100%;
-}
 
-.left-column {
-  flex: 1;
-  margin: 20px;
-}
 
-.left-column p {
-  margin-bottom: 30px;
-}
 
-.left-column h2 {
-  margin-bottom: 10px;
-}
 
-.right-column {
-  flex: 1;
-  margin: 20px;
-}
-
-.right-column p {
-  margin-bottom: 30px;
-}
-
-.right-column h2 {
-  margin-bottom: 10px;
-}
 
 
 /* Картинки */
 
 img {
-  transition: all 0.5s ease-in-out;
   position: relative;
   width: 30%;
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
-}
-
-img:hover {
-  /* box-shadow: 2 2 10px rgba(0, 0, 0, 0.5); */
-  transform: translateY(-2px);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  /* filter: brightness(50%); */
 }
 
 .container {
@@ -198,79 +239,84 @@ img:hover {
 
 }
 
-/* Уменьшение размера текста на экранах больше 1200px */
-@media only screen and (min-width: 2000px) {
-  body {
-    font-size: 150%;
-  }
+/* добавить все ниже */
+
+/* body {
+  font-size: 20px;
+} */
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fade-out 1s ease-out forwards;
+  animation-delay: 2s;
 }
 
-/* Уменьшение размера текста на экранах больше 1200px */
-@media only screen and (max-width: 390rem) {
-  body {
-    font-size: 20px;
-  }
+.loading-overlay h1 {
+  color: white;
+  font-family: 'MyFont', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  opacity: 0;
+  animation: fade-in-out 2s ease-in-out forwards;
+}
 
-  .loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .loading-overlay h1 {
-    color: white;
-    font-size: 3rem;
-    text-align: center;
+@keyframes fade-in-out {
+  0% {
     opacity: 0;
-    animation: fade-in-out 2s ease-in-out forwards;
   }
-
-  @keyframes fade-in-out {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+  50% {
+    opacity: 1;
   }
-
-  .loading-overlay {
-    /* ... */
-    animation: fade-out 1s ease-out forwards;
-    animation-delay: 2s;
+  100% {
+    opacity: 0;
   }
-  
-  @keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-    to {
-      /* opacity: 0; */
-      transform: translateY(-100%);
-    }
-  }
-  
 }
 
-
-
-
-
-
-
-
-
-
-
-
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
   
+
+
+/* Гамбургер */
+
+@media (min-width: 1000px) {  
+  
+  .header button {
+    display: none;
+  }
+
+  .menu {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+}
+
+/* стили для меню на мобильных устройствах */
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,207 @@
+@media (max-width: 980px) {
+  
+  /* Заголовок */
+
+  .header {
+    font-size: 100%;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 15%;
+    background-color: rgba(208, 208, 208, 0.902);
+    height: 70px;
+  }
+
+  .header h1 {
+    position: relative;
+    top: 20px;
+    font-size: 60px;
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    z-index: 100;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 70px;
+    display: inline-block;  
+    width: 70px;
+  }
+
+  nav a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: none;
+  }
+
+  .hamburger img {
+    top: 10px;
+    display: flex;
+    width: 100%;
+    animation: rotate 1s ease-in-out;
+  }
+
+  /* .menu-active-button {
+    position: fixed;
+    right: 35px;
+    top: 75px;
+    width: 70px;
+    height: 27px;
+  } */
+
+  .menu-active-button img {
+    position: fixed;
+    right: 35px;
+    top: 62px;
+    width: 70px;
+  }
+
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  a.menu-item {
+    font-size: 250%;
+    text-decoration: none;
+    padding: 4%;
+    width: 50%;
+  }
+  
+  
+  .menu {
+    position: fixed;
+    margin-top: -90%;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+    top: 0;
+    list-style: none;
+  }
+
+  .menu.activeMenu.menu-item {
+    height: 30%;
+    text-align: center;
+  }
+  
+  .menu.activeMenu {
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0;
+    list-style: none;
+    padding-bottom: 2%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    box-shadow: 0px 50px 50px 50px rgb(0 0 0 / 34%);
+  }
+
+  a.slash.menu-item {
+    padding-bottom: 3%;
+    background: linear-gradient(to left, #33333300, #333 100%);
+    background-position: 0 100%;
+    background-size: 100% 8px;
+    background-repeat: repeat-x;
+  }
+
+  a:hover {
+    background-color: #f2f2f244;
+  }
+
+  /* Карточки */
+
+  .main-content {
+    margin: 0px;
+  }
+  
+  .main-content img {
+    width: 100%;
+  }
+  
+  .left-column {
+    margin: 5px;
+  }
+  
+  .left-column p {
+    margin-bottom: 15%;
+  }
+  
+  .left-column h2 {
+    margin-top: 5%;
+    /* margin-bottom: 5%; */
+    /* font-size: 40px; */
+  }
+  
+  .right-column {
+    margin: 5px;
+  }
+  
+  .right-column p {
+    margin-bottom: 15%;
+  }
+  
+  .right-column h2 {
+    margin-top: 5%;
+    /* margin-bottom: 0%; */
+    /* font-size: 40px; */
+  }
+
+  body {
+    /* font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif; */
+    font-size: 120%;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 0px;
+    background-color: rgb(208, 208, 208);
+  }
+
+
+
+    /* Текст на странице */
+
+    h2 {
+      font-size: 55px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    }
+
+    p {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: normal;
+      font-weight: 100;
+      font-size: 45px;
+    }
+  
+    .text {
+      text-align: center;
+    }
+  
+    .contacts {
+      text-align: center;
+    }
+  
+    .personal {
+      margin-top: 100px;
+      font-size: 21px;
+    }
+}

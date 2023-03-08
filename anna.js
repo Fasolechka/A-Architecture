@@ -13,3 +13,16 @@ if (typeof (Storage) !== "undefined") {
     }
 };
 
+
+
+// для мобилки
+
+const hamburgerM = document.querySelector('.hamburger');
+const menuM = document.querySelector('.menu');
+const menuItems = document.querySelectorAll('.menu-item');
+
+
+hamburgerM.addEventListener('click', () => {
+  menuM.classList.toggle('activeMenu');
+  hamburgerM.classList.toggle('menu-active-button');
+});
